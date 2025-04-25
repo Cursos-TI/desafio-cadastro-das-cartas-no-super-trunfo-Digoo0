@@ -1,22 +1,109 @@
 #include <stdio.h>
-
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de cadastro de cartas de cidades.
-// Siga os comentários para implementar cada parte do desafio.
-//Teste larissa
-
-int main() {
-    // Sugestão: Defina variáveis separadas para cada atributo da cidade.
-    // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
+#include <string.h>
+int main(){
     
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
+    //aqui definimos o estado da carta, de A até H.
+    char estado[2];
+        printf("Digite o Estado da sua Carta 1 de A a H: \n");
+        scanf("%s", estado);
     
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    //aqui definimos o código, de 01 a 04.
+    char code[3];
+        printf("Agora, digite um código para a carta 1 de 01 a 04: \n");
+        scanf("%s", code);
+    
+    while ((getchar()) != '\n'); //aqui limpamos os lixos deixados pelo scanf
+  
+    //aqui definimos a cidade escolhida
+    char city[50];
+        printf("Digite o nome da cidade 1: \n");
+        fgets(city, 50, stdin);
+        city[strcspn(city, "\n")] = 0;
+        
+    
+    //aqui definimos o tamanho da população
+    int popu;
+        printf("Digite o tamanho da populaçao 1: \n");
+        scanf("%d", &popu);
+ 
+    //aqui definimos a área da cidade
+    float area;
+        printf("Digite a area da sua cidade 1: \n");
+        scanf("%f", &area); //lembrar do %2.f para limitar as casas decimais
+   
+    
+    //definindo pib
+    float pib;
+        printf("Digite o pib da sua cidade 1: \n");
+        scanf("%f", &pib);
 
+    
+    
+    int turistico;
+        printf("Digite a quantidade de pontos turisticos da cidade 1: \n");
+        scanf("%d", &turistico);
+        
+        
+    //SEPARAÇÃO    
+    
+    
+    //aqui definimos o estado da carta, de A até H.
+    char estado2[2];
+        printf("Digite o Estado da sua Carta 2 de A a H: \n");
+        scanf("%s", estado2);
+    
+    //aqui definimos o código, de 01 a 04.
+    char code2[3];
+        printf("Agora, digite um código para a carta 2 de 01 a 04: \n");
+        scanf("%s", code2);
+    
+    while ((getchar()) != '\n'); //aqui limpamos os lixos deixados pelo scanf
+  
+    //aqui definimos a cidade escolhida
+    char city2[50];
+        printf("Digite o nome da cidade 2: \n");
+        fgets(city2, 50, stdin);
+        city2[strcspn(city2, "\n")] = 0;
+        
+    
+    //aqui definimos o tamanho da população
+    int popu2;
+        printf("Digite o tamanho da populçao 2: \n");
+        scanf("%d", &popu2);
+ 
+    //aqui definimos a área da cidade
+    float area2;
+        printf("Digite a area da sua cidade 2: \n");
+        scanf("%f", &area2); //lembrar do %2.f para limitar as casas decimais
+   
+    
+    //definindo pib
+    float pib2;
+        printf("Digite o pib da sua cidade 2: \n");
+        scanf("%f", &pib2);
+
+    
+    //atribuindo quantidade de pontos turisticos
+    int turistico2;
+        printf("Digite a quantidade de pontos turisticos da cidade 2: \n");
+        scanf("%d", &turistico2);
+        
+        
+    printf("ESPECIFICAÇÕES DA CARTA: %s%s \n", estado, code);
+    printf("O nome da cidade é: %s \n", city);
+    printf("O tamanho da população é de: %d pessoas \n", popu);
+    printf("A area da sua cidade é: %2.f Km² \n", area);
+    printf("O PIB da cidade é: %2.f Bilhões \n", pib);
+    printf("Número de pontos turísticos: %d \n \n", turistico);
+    
+    printf("ESPECIFICAÇÕES DA CARTA: %s%s \n", estado2, code2);
+    printf("O nome da cidade é: %s \n", city2);
+    printf("O tamanho da população é de: %d pessoas \n", popu2);
+    printf("A area da sua cidade é: %2.f Km² \n", area2);
+    printf("O PIB da cidade é: %2.f Bilhões \n", pib2);
+    printf("Número de pontos turísticos: %d \n \n", turistico2);
+        
+        
+    
     return 0;
 }
