@@ -43,6 +43,12 @@ int main(){
         printf("Digite a quantidade de pontos turisticos da cidade 1: \n");
         scanf("%d", &turistico);
         
+    float densidade;
+    densidade = (popu/area);
+    
+    float rpib;
+    rpib = (pib/popu);
+        
         
     //SEPARAÇÃO    
     
@@ -88,20 +94,30 @@ int main(){
         printf("Digite a quantidade de pontos turisticos da cidade 2: \n");
         scanf("%d", &turistico2);
         
+    float densidade2;
+    densidade2 = (popu2/area2);
+    
+    float rpib2;
+    rpib2 = (pib2/popu2);
+        
         
     printf("ESPECIFICAÇÕES DA CARTA: %s%s \n", estado, code);
     printf("O nome da cidade é: %s \n", city);
     printf("O tamanho da população é de: %d pessoas \n", popu);
     printf("A area da sua cidade é: %2.f Km² \n", area);
     printf("O PIB da cidade é: %2.f Bilhões \n", pib);
-    printf("Número de pontos turísticos: %d \n \n", turistico);
+    printf("Número de pontos turísticos: %d \n", turistico);
+    printf("Densidade populacional: %.1f \n", densidade);
+    printf("PIB per capita: %.1f \n \n", rpib);
     
     printf("ESPECIFICAÇÕES DA CARTA: %s%s \n", estado2, code2);
     printf("O nome da cidade é: %s \n", city2);
     printf("O tamanho da população é de: %d pessoas \n", popu2);
     printf("A area da sua cidade é: %2.f Km² \n", area2);
     printf("O PIB da cidade é: %2.f Bilhões \n", pib2);
-    printf("Número de pontos turísticos: %d \n \n", turistico2);
+    printf("Número de pontos turísticos: %d \n", turistico2);
+    printf("Densidade populacional: %.1f \n", densidade2);
+    printf("PIB per capita: %.1f", rpib2);
         
         
     
