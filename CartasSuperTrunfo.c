@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 int main(){
     
     //aqui definimos o estado da carta, de A até H.
@@ -22,9 +23,9 @@ int main(){
         
     
     //aqui definimos o tamanho da população
-    int popu;
+    unsigned long int popu;
         printf("Digite o tamanho da populaçao 1: \n");
-        scanf("%d", &popu);
+        scanf("%lu", &popu);
  
     //aqui definimos a área da cidade
     float area;
@@ -48,10 +49,9 @@ int main(){
     
     float rpib;
     rpib = (pib/popu);
-        
+    
         
     //SEPARAÇÃO    
-    
     
     //aqui definimos o estado da carta, de A até H.
     char estado2[2];
@@ -73,9 +73,9 @@ int main(){
         
     
     //aqui definimos o tamanho da população
-    int popu2;
+    unsigned long int popu2;
         printf("Digite o tamanho da populçao 2: \n");
-        scanf("%d", &popu2);
+        scanf("%lu", &popu2);
  
     //aqui definimos a área da cidade
     float area2;
@@ -99,9 +99,27 @@ int main(){
     
     float rpib2;
     rpib2 = (pib2/popu2);
+
+    bool comp;
+    comp = densidade < densidade2;
+
+    bool comp2;
+    comp2 = densidade2 < densidade;
+
+    unsigned long int total;
+    total = (unsigned long int) popu + (int)area + (int)pib + turistico + (int)rpib +comp;
+
+    unsigned long int total2;
+    total2 = (unsigned long int) popu2 + (int)area2 + (int)pib2 + turistico2 + (int)rpib2 +comp2;
+
+    bool ganhou;
+    ganhou = total > total2;
+
+    bool ganhou2;
+    ganhou2 = total2 > total;
+
         
-        
-    printf("ESPECIFICAÇÕES DA CARTA: %s%s \n", estado, code);
+    printf("\nESPECIFICAÇÕES DA CARTA: %s%s \n", estado, code);
     printf("O nome da cidade é: %s \n", city);
     printf("O tamanho da população é de: %d pessoas \n", popu);
     printf("A area da sua cidade é: %2.f Km² \n", area);
@@ -117,8 +135,11 @@ int main(){
     printf("O PIB da cidade é: %2.f Bilhões \n", pib2);
     printf("Número de pontos turísticos: %d \n", turistico2);
     printf("Densidade populacional: %.1f \n", densidade2);
-    printf("PIB per capita: %.1f", rpib2);
-        
+    printf("PIB per capita: %.1f \n \n", rpib2);
+
+    printf(" Carta 1: %d \n", ganhou);
+    printf(" Carta 2: %d \n", ganhou2);
+       
         
     
     return 0;
